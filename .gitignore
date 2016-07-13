@@ -242,3 +242,5 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 WritingToFile/obj/WritingToFile-UI.xcodeproj/project.xcworkspace/xcuserdata/jason.xcuserdatad/UserInterfaceState.xcuserstate
+
+*.xcuserstate
