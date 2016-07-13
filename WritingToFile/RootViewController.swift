@@ -8,7 +8,7 @@
 
 	@IBAction func writeAction(from: AnyObject)
 	{
-		let alertView: UIAlertView = UIAlertView(title: "Title", message: "Message", delegate: self, cancelButtonTitle: "OK", otherButtonTitles: nil);
+		let alertView: UIAlertView = UIAlertView(title: "Title", message: eText.text, delegate: self, cancelButtonTitle: "OK", otherButtonTitles: nil);
 		alertView.show();
 	}
 
