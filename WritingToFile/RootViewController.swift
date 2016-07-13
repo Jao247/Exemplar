@@ -7,9 +7,9 @@
 
 	@IBOutlet weak var eText: UITextField;
 
-	@IBAction func writeData()
+	@IBAction func writeData(sender: AnyObject)
 	{
-
+		UIAlertView(title: "Title", message: eText.text, delegate: self, cancelButtonTitle: "Done", otherButtonTitles: nil);
 	}
 
 	public override func viewDidLoad() 
