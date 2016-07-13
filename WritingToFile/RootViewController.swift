@@ -9,13 +9,19 @@
 
     @IBAction func alertMsg(sender: AnyObject)
     {
+		var alert = UIAlertView(title: "Attempting to write", message: "\"\(eText.text)\"", delegate: self, cancelButtonTitle: "Done", otherButtonTitles: nil);
+        alert.show();
         let fileMgr = NSFileManager.defaultManager();
 		let dir = fileMgr.containerURLForSecurityApplicationGroupIdentifier(groupIdentity);
+       
+		let path = dir!.URLByAppendingPathComponent(fileName, isDirectory: false);
 
-        let data: NSData = eText.text!.dataUsingEncoding(NSStringEncoding.UTF8StringEncoding)!;
-        
-        try! fileMgr.createFileAtPath(dir!.absoluteString + fileName, contents: data, attributes: nil);
-        let alert = UIAlertView(title: "Accomplished", message: "\"\(eText.text)\"\nHas been written to a file.", delegate: self, cancelButtonTitle: "Done", otherButtonTitles: nil);
+		do{
+			try eText.text!.writeToFile(path.absoluteString, atomically: true, encoding: NSStringEncoding.UTF8StringEncoding);
+        } catch {
+			NSLog("Error Occurred.");
+		}
+		alert = UIAlertView(title: "Accomplished", message: "File has been written", delegate: self, cancelButtonTitle: "Done", otherButtonTitles: nil);
     }
 
     public override func viewDidLoad() 
