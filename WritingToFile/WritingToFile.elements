@@ -52,7 +52,7 @@
     <Compile Include="RootViewController.swift" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Entitlements1.entitlements">
+    <Content Include="WritingToFile.entitlements">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Resources\Info.plist" />
