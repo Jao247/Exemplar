@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="udP-9O-g0n">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--WritingToFile Root View-->
@@ -18,10 +19,23 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wth-dT-nnD">
                                 <rect key="frame" x="20" y="72" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="UJ3-9D-qsN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UJ3-9D-qsN"/>
+                                    </mask>
+                                </variation>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="45" y="72" width="310" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UJ3-9D-qsN"/>
+                                    </mask>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOT-RB-2FA">
@@ -37,15 +51,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Wth-dT-nnD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="LUd-D4-PwH"/>
+                            <constraint firstItem="Wth-dT-nnD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Wx5-pZ-jM3"/>
+                            <constraint firstItem="nOT-RB-2FA" firstAttribute="top" secondItem="Wth-dT-nnD" secondAttribute="bottom" constant="8" id="epv-89-2Uh"/>
+                            <constraint firstItem="nOT-RB-2FA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="157" id="ifl-GU-cpD"/>
                             <constraint firstItem="nOT-RB-2FA" firstAttribute="top" secondItem="Wth-dT-nnD" secondAttribute="bottom" constant="8" id="s1r-LN-4zQ"/>
                             <constraint firstItem="nOT-RB-2FA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="syv-4j-9fg"/>
                             <constraint firstItem="Wth-dT-nnD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yoG-5i-g2F"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="LUd-D4-PwH"/>
+                                <exclude reference="Wx5-pZ-jM3"/>
                                 <exclude reference="yoG-5i-g2F"/>
+                                <exclude reference="epv-89-2Uh"/>
+                                <exclude reference="ifl-GU-cpD"/>
                                 <exclude reference="s1r-LN-4zQ"/>
                                 <exclude reference="syv-4j-9fg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="LUd-D4-PwH"/>
+                                <include reference="Wx5-pZ-jM3"/>
+                                <include reference="epv-89-2Uh"/>
+                                <include reference="ifl-GU-cpD"/>
                             </mask>
                         </variation>
                     </view>
