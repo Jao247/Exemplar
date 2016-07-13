@@ -3,7 +3,7 @@
 @IBObject class RootViewController : UIViewController {
 
 	let groupIdentity = "group.jason.tester";
-	let fileName = "example.text";
+	let fileName = "example.txt";
 	@IBOutlet weak var eText: UITextField;
 
 	@IBAction func writeAction(from: AnyObject)
