@@ -14,7 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *eText;
 
-- (IBAction)writeAction:(id)sender;
+- (IBAction)alertMsg:(id)sender;
 
 @end
 

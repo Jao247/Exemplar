@@ -15,7 +15,7 @@
 
 @implementation RootViewController
 
-- (IBAction)writeAction:(id)sender
+- (IBAction)alertMsg:(id)sender
 {
   // Placeholder method. Do not add code here.
 }
