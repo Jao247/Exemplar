@@ -17,11 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wth-dT-nnD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wth-dT-nnD">
                                 <rect key="frame" x="20" y="72" width="310" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="310" id="UJ3-9D-qsN"/>
-                                    <constraint firstAttribute="width" constant="310" id="VET-gh-kWZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -39,7 +38,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOT-RB-2FA">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOT-RB-2FA">
                                 <rect key="frame" x="152" y="110" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -68,7 +67,11 @@
                             <mask key="constraints">
                                 <exclude reference="LUd-D4-PwH"/>
                                 <exclude reference="Wx5-pZ-jM3"/>
+                                <exclude reference="Zkc-Sm-Ddt"/>
+                                <exclude reference="cUI-05-Ubo"/>
                                 <exclude reference="yoG-5i-g2F"/>
+                                <exclude reference="0Mk-0c-eNF"/>
+                                <exclude reference="EKO-dl-i2e"/>
                                 <exclude reference="epv-89-2Uh"/>
                                 <exclude reference="ifl-GU-cpD"/>
                                 <exclude reference="s1r-LN-4zQ"/>
