@@ -16,6 +16,7 @@
     <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
     <MinFrameworkVersionRequired>4.0</MinFrameworkVersionRequired>
     <Name>WritingToFile</Name>
+    <EntitlementsFile>Entitlements1.entitlements</EntitlementsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <Optimize>false</Optimize>
@@ -51,6 +52,9 @@
     <Compile Include="RootViewController.swift" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Entitlements1.entitlements">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Resources\Info.plist" />
     <Storyboard Include="Resources\Main.storyboard" />
     <AssetCatalog Include="Resources\Images.xcassets">
