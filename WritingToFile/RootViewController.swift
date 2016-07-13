@@ -9,10 +9,12 @@
 
     @IBAction func alertMsg(sender: AnyObject)
     {
-	let dir = containerURLForSecurityApplicationGroupIdentifier(groupIdentity);
-        let fileMgr = NSFileManager.defaultmanager();
+        let fileMgr = NSFileManager.defaultManager();
+		let dir = fileMgr.containerURLForSecurityApplicationGroupIdentifier(groupIdentity);
 
-        try! fileMgr.createFileAtPath(dir.absoluteString + fileName, contents: eText.text, attributes: nil);
+        let data: NSData = eText.text!.dataUsingEncoding(NSStringEncoding.UTF8StringEncoding)!;
+        
+        try! fileMgr.createFileAtPath(dir!.absoluteString + fileName, contents: data, attributes: nil);
         let alert = UIAlertView(title: "Accomplished", message: "\"\(eText.text)\"\nHas been written to a file.", delegate: self, cancelButtonTitle: "Done", otherButtonTitles: nil);
     }
 
