@@ -27,11 +27,39 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpX-gC-WrH">
+                                <rect key="frame" x="183" y="101" width="234" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="fKV-Wy-ys0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3N-PD-sT2">
+                                <rect key="frame" x="273" y="139" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M9b-Su-5uu"/>
+                                    <constraint firstAttribute="width" constant="54" id="upm-Wm-UR0"/>
+                                </constraints>
+                                <state key="normal" title="Commit"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="M9b-Su-5uu"/>
+                                        <exclude reference="upm-Wm-UR0"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dpX-gC-WrH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4DN-hV-V3Y"/>
                             <constraint firstItem="7hu-Od-syF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="163" id="LcT-4W-ifB"/>
+                            <constraint firstItem="R3N-PD-sT2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="253" id="NpR-GE-gVH"/>
+                            <constraint firstItem="R3N-PD-sT2" firstAttribute="top" secondItem="dpX-gC-WrH" secondAttribute="bottom" constant="8" id="OZh-Ni-iKP"/>
                             <constraint firstItem="7hu-Od-syF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="PyS-fP-UPd"/>
+                            <constraint firstItem="R3N-PD-sT2" firstAttribute="top" secondItem="dpX-gC-WrH" secondAttribute="bottom" constant="8" id="Qxg-9c-n8u"/>
+                            <constraint firstItem="dpX-gC-WrH" firstAttribute="top" secondItem="7hu-Od-syF" secondAttribute="bottom" constant="8" id="V5G-xJ-Iy1"/>
+                            <constraint firstItem="R3N-PD-sT2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W0B-Um-uQY"/>
                             <constraint firstItem="7hu-Od-syF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cBA-fP-PW8"/>
                             <constraint firstItem="7hu-Od-syF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lDp-LX-nuh"/>
                         </constraints>
@@ -39,6 +67,8 @@
                             <mask key="constraints">
                                 <exclude reference="LcT-4W-ifB"/>
                                 <exclude reference="cBA-fP-PW8"/>
+                                <exclude reference="NpR-GE-gVH"/>
+                                <exclude reference="Qxg-9c-n8u"/>
                             </mask>
                         </variation>
                     </view>
